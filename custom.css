@@ -1,0 +1,21 @@
+.head-logo {
+    top: 14px;
+    position: relative;
+    display: none;
+}
+.desktop .head-sticky .head-logo.white,
+.desktop .head-sticky .head-logo.green {
+    display: none;
+}
+.mobile .head-logo.white {
+    display: block;
+}
+.desktop .head-logo.green {
+    display: block;
+}
+.desktop .head-sticky .head-logo.black {
+    display: block;
+}
+.btn-mobile.btn-mobile-nav {
+    display: none !important;
+}
