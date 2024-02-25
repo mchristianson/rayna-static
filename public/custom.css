@@ -1,7 +1,8 @@
 .head-logo {
-    top: 14px;
+    top: 0;
     position: relative;
     display: none;
+    width: 175px;
 }
 .desktop .head-sticky .head-logo.white,
 .desktop .head-sticky .head-logo.green {
