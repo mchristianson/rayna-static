@@ -1,1134 +1,1681 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-color-8bc34a theme-skin-light">
-<script async="" src="src/tag.js"></script>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Rayna Christianson - Volleyball</title>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/ico" href="favicon.png">
-
-    <!-- Google Fonts -->
-    <link rel="stylesheet" type="text/css" href="src/styles.css">
-    <!-- Icon Fonts -->
-    <link rel="stylesheet" type="text/css" href="src/map-icons.min.css">
-    <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="src/jquery.bxslider.css">
-    <link rel="stylesheet" type="text/css" href="src/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" type="text/css" href="src/mediaelementplayer.min.css">
-    <link rel="stylesheet" type="text/css" href="src/jquery.fancybox.css">
-    <link rel="stylesheet" type="text/css" href="src/style.css">
-    <link rel="stylesheet" type="text/css" href="src/anns-green.css">
-    <link rel="stylesheet" type="text/css" href="custom.css">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style type="text/css">.fancybox-margin {
-        margin-right: 15px;
-    }</style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQJ8QNCE5Y"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayna Christianson - Volleyball Recruiting Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        gtag('js', new Date());
+        :root {
+            --primary-color: #1a5490;
+            --secondary-color: #e31837;
+            --accent-color: #ffd700;
+            --text-dark: #2c3e50;
+            --text-light: #ecf0f1;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
 
-        gtag('config', 'G-VQJ8QNCE5Y');
-    </script>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            /*background: linear-gradient(135deg, var(--primary-color) 0%, #0d3a6a 100%);*/
+            background: url('img/blue_background.jpg');
+            color: var(--text-light);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .commitment-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            margin: 2rem 0;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .commitment-badge img {
+            height: 60px;
+            width: auto;
+            margin-top: 15px;
+            margin-left: 5px;
+        }
+
+        .commitment-text {
+            text-align: left;
+        }
+
+        .commitment-text .status {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .commitment-text .school {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-box .label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-box .value {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-card {
+            background: var(--bg-white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+            position: sticky;
+            top: 100px;
+        }
+
+        .profile-image {
+            width: 100%;
+            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-style: italic;
+        }
+
+        .contact-info {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .contact-info li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .contact-info li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-info .icon {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .contact-info a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-color);
+        }
+
+        .bio-content {
+            background: var(--bg-white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .bio-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box ul {
+            list-style-position: inside;
+            line-height: 2;
+        }
+
+        /* Stats Dashboard */
+        .stats-dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary-color), #0d3a6a);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-card h3 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .stat-card p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: calc(50% - 2rem);
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: auto;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px var(--primary-color);
+        }
+
+        .timeline-year {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content ul {
+            list-style-position: inside;
+            line-height: 1.8;
+        }
+
+        /* Honors & Awards */
+        .honors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .honor-card {
+            background: var(--bg-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .honor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .honor-card a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .honor-thumbnail {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d3a6a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .honor-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .honor-thumbnail .placeholder {
+            font-size: 4rem;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .honor-content {
+            padding: 2rem;
+            flex-grow: 1;
+        }
+
+        .honor-card .year {
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .honor-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .honor-card p {
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .honor-card .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: gap 0.3s ease;
+        }
+
+        .honor-card:hover .read-more {
+            gap: 0.75rem;
+        }
+
+        .external-link-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 0.5rem;
+            border-radius: 50%;
+            font-size: 1rem;
+            z-index: 2;
+        }
+
+        /* Video Section */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .video-card {
+            background: var(--bg-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-placeholder {
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 3rem;
+        }
+
+        .video-placeholder img {
+            width: 100%;
+        }
+        .video-info {
+            padding: 1.5rem;
+        }
+
+        .video-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .video-info p {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .video-platform {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+        }
+
+        .video-platform.youtube {
+            background: #FF0000;
+        }
+
+        .video-platform.hudl {
+            background: #FF6600;
+        }
+
+        /* Academics */
+        .academics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .course-category {
+            background: var(--bg-white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .course-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .course-category ul {
+            list-style: none;
+        }
+
+        .course-category li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .course-category li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d3a6a 100%);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--text-light);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: var(--shadow);
+                transition: left 0.3s ease;
+                align-items: flex-start;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-card {
+                position: static;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+                padding-left: 50px;
+            }
+
+            .timeline-content {
+                width: 100% !important;
+                margin: 0 !important;
+            }
+
+            .timeline-marker {
+                left: 20px;
+            }
+
+            .video-grid,
+            .academics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .commitment-badge {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .commitment-text {
+                text-align: center;
+            }
+
+            .quick-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+    </style>
 </head>
+<body>
+<!-- Header -->
+<header>
+    <nav>
+        <div class="logo">Rayna Christianson</div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#stats" onclick="closeMenu()">Stats</a></li>
+            <li><a href="#timeline" onclick="closeMenu()">Career</a></li>
+            <li><a href="#honors" onclick="closeMenu()">Honors</a></li>
+            <li><a href="#videos" onclick="closeMenu()">Videos</a></li>
+            <li><a href="#academics" onclick="closeMenu()">Academics</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-<body class="home header-has-img">
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Rayna Christianson</h1>
+        <p class="hero-subtitle">6'2" Setter • Right Side • Middle Hitter • Class of 2026</p>
 
-<div class="mobile-nav">
-    <button class="btn-mobile mobile-nav-close"><i class="icon icon-close"></i></button>
-
-    <div class="mobile-nav-inner mCustomScrollbar _mCS_1 mCS_no_scrollbar">
-        <div id="mCSB_1" class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_inside" tabindex="0"
-             style="max-height: 0px;">
-            <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
-                 style="position:relative; top:0; left:0;" dir="ltr">
-                <nav class="nav">
-                    <ul class="clearfix">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#stats">Stats</a></li>
-                        <li><a href="#video">Video</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#volleyball">Volleyball</a></li>
-                        <li><a href="#contact">Contact <span></span></a></li>
-                    </ul>
-                </nav>
+        <div class="commitment-badge">
+            <div style="background: white; padding: 0.5rem; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+                <span style="color: #1a5490; font-size: 2rem; font-weight: bold;"><img
+                        src="img/Creighton-Bluejays-Logo.png"/></span>
             </div>
-            <div id="mCSB_1_scrollbar_vertical"
-                 class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark mCSB_scrollTools_vertical" style="display: none;">
-                <div class="mCSB_draggerContainer">
-                    <div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
-                         style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;">
-                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
-                    </div>
-                    <div class="mCSB_draggerRail"></div>
-                </div>
+            <div class="commitment-text">
+                <div class="status">VERBALLY COMMITTED</div>
+                <div class="school">Creighton University</div>
+                <div class="status">Division I Volleyball</div>
+            </div>
+        </div>
+
+        <div class="quick-stats">
+            <div class="stat-box">
+                <div class="label">Height</div>
+                <div class="value">6'2"</div>
+            </div>
+            <div class="stat-box">
+                <div class="label">Approach Jump</div>
+                <div class="value">10'</div>
+            </div>
+            <div class="stat-box">
+                <div class="label">Position</div>
+                <div class="value">Setter/RS</div>
+            </div>
+            <div class="stat-box">
+                <div class="label">Class</div>
+                <div class="value">2026</div>
             </div>
         </div>
     </div>
-</div><!-- .mobile-nav -->
+</section>
 
+<!-- About Section -->
+<section id="about" class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+        <div class="profile-card">
+            <div class="profile-image">
+                <img src="src/rayna_christianson_cover.jpg"/>
+            </div>
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Contact Information</h3>
+            <ul class="contact-info">
+                <li>
+                    <span class="icon">🏫</span>
+                    <span>Lakeville North High School</span>
+                </li>
+                <li>
+                    <span class="icon">🏐</span>
+                    <span>Mizuno Northern Lights Juniors</span>
+                </li>
+                <li>
+                    <span class="icon">📧</span>
+                    <a href="mailto:raynachristianson@icloud.com">raynachristianson@icloud.com</a>
+                </li>
+                <li>
+                    <span class="icon">📱</span>
+                    <a href="tel:+16127083858">(612) 708-3858</a>
+                </li>
+                <li>
+                    <span class="icon">🔗</span>
+                    <a href="https://prepdig.com/player/rayna-christianson/" target="_blank">PrepDig Profile</a>
+                </li>
+            </ul>
+        </div>
 
-<div class="wrapper">
-    <header class="header" style="min-height: 95px;">
-        <div class="head-bg"
-             style="background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5) ), url('src/background.jpg')"></div>
+        <div class="bio-content">
+            <p>
+                I am a 6'2" Setter/Right Side/Middle and captain at Lakeville North High School, as well as a member of
+                the Mizuno Northern Lights Juniors Club Team. I have verbally committed to play Division I volleyball at
+                Creighton University.
+            </p>
 
-        <div class="head-bar">
-            <div class="head-bar-inner">
-                <div class="row">
-                    <div class="col-sm-3 col-xs-6">
-                        <a class="head-logo white" href=""><img src="img/rayna_christianson_logo.png"
-                                                                alt="Rayna Christianson"/></a>
-                        <a class="head-logo green" href=""><img src="img/rayna_christianson_logo.png"
-                                                                alt="Rayna Christianson"/></a>
-                        <a class="head-logo black" href=""><img src="img/rayna_christianson_logo_blk.png"
-                                                                alt="Rayna Christianson"/></a>
-                    </div>
+            <div class="highlight-box">
+                <h3>2023-2024 Season Highlights</h3>
+                <ul>
+                    <li>Led high school varsity team in kills, aces, and assists</li>
+                    <li>Star Tribune All-Metro First Team</li>
+                    <li>Minnesota All-State honors</li>
+                    <li>Pioneer Press East Metro Player of the Year finalist</li>
+                    <li>USA Nationals Championship - 17 American Division</li>
+                    <li>Named MVP and All-Tournament Team</li>
+                </ul>
+            </div>
 
-                    <div class="col-sm-9 col-xs-6">
-                        <div class="nav-wrap">
-                            <nav class="nav">
-                                <ul class="clearfix">
-                                    <li><a href="#">Home<span></span><span></span></a></li>
-                                    <li><a href="#stats">Stats<span></span><span></span></a></li>
-                                    <li><a href="#video">Video<span></span><span></span></a></li>
-                                    <li class="active"><a href="#volleyball">Volleyball<span></span><span></span></a>
-                                    </li>
+            <p>
+                This past club season, I helped lead my team to a USA Nationals championship in the 17 American
+                division, where I was named MVP and selected to the All-Tournament Team. I was also selected to attend
+                the National Team Development Program for USA Volleyball at the Olympic Training Center.
+            </p>
 
-                                    <li><a href="#education">Academics<span></span><span></span></a></li>
-                                    <li><a href="#references">References <span></span><span></span></a></li>
-                                    <li><a href="#tournaments">Tournaments<span></span><span></span></a></li>
-                                </ul>
-                            </nav>
+            <div class="highlight-box">
+                <h3>Recent Achievements (2025)</h3>
+                <ul>
+                    <li>Reached 2,000 career assists, 1,000 kills, and 500 digs milestones</li>
+                    <li>Star Tribune Athlete of the Week</li>
+                    <li>MNVBCA All-State Tournament Team</li>
+                    <li>JVA All-Nationals Team Selection</li>
+                    <li>Ranked #1 Setter in Minnesota for Class of 2026</li>
+                </ul>
+            </div>
 
-                        </div><!-- .nav-wrap -->
-                    </div>
-                </div>
+            <p>
+                I pride myself on being a versatile athlete who excels in multiple positions. My coach describes me as
+                having "size, skills, and finesse to be a high level setter at the next level" with "consistent
+                location" and the ability to "run a number of different tempos on offense."
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Dashboard -->
+<section id="stats" class="container">
+    <h2 class="section-title">Career Statistics</h2>
+
+    <div class="stats-dashboard">
+        <div class="stat-card">
+            <h3>2,221</h3>
+            <p>Career Assists</p>
+        </div>
+        <div class="stat-card">
+            <h3>1,128</h3>
+            <p>Career Kills</p>
+        </div>
+        <div class="stat-card">
+            <h3>630</h3>
+            <p>Career Digs</p>
+        </div>
+        <div class="stat-card">
+            <h3>.326</h3>
+            <p>Hitting Percentage</p>
+        </div>
+        <div class="stat-card">
+            <h3>253</h3>
+            <p>Blocks</p>
+        </div>
+        <div class="stat-card">
+            <h3>204</h3>
+            <p>Aces</p>
+        </div>
+    </div>
+
+    <!--    <div class="bio-content mt-2">-->
+    <!--        <h3 style="color: var(&#45;&#45;primary-color); margin-bottom: 1rem;">2024 Junior Season Stats</h3>-->
+    <!--        <div class="academics-grid">-->
+    <!--            <div class="course-category">-->
+    <!--                <h3>Assists</h3>-->
+    <!--                <p style="font-size: 2rem; font-weight: bold; color: var(&#45;&#45;primary-color);">888</p>-->
+    <!--                <p>Led team in set assists</p>-->
+    <!--            </div>-->
+    <!--            <div class="course-category">-->
+    <!--                <h3>Kills</h3>-->
+    <!--                <p style="font-size: 2rem; font-weight: bold; color: var(&#45;&#45;primary-color);">103</p>-->
+    <!--            </div>-->
+    <!--            <div class="course-category">-->
+    <!--                <h3>Aces</h3>-->
+    <!--                <p style="font-size: 2rem; font-weight: bold; color: var(&#45;&#45;primary-color);">47</p>-->
+    <!--                <p>Led team in service aces</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <div class="bio-content mt-2">-->
+    <!--        <h3 style="color: var(&#45;&#45;primary-color); margin-bottom: 1rem;">2023 Sophomore Season Stats</h3>-->
+    <!--        <div class="academics-grid">-->
+    <!--            <div class="course-category">-->
+    <!--                <h3>Assists</h3>-->
+    <!--                <p style="font-size: 2rem; font-weight: bold; color: var(&#45;&#45;primary-color);">887</p>-->
+    <!--                <p>Led team in set assists</p>-->
+    <!--            </div>-->
+    <!--            <div class="course-category">-->
+    <!--                <h3>Kills</h3>-->
+    <!--                <p style="font-size: 2rem; font-weight: bold; color: var(&#45;&#45;primary-color);">280</p>-->
+    <!--                <p>Led team in kills</p>-->
+    <!--            </div>-->
+    <!--            <div class="course-category">-->
+    <!--                <h3>Aces</h3>-->
+    <!--                <p style="font-size: 2rem; font-weight: bold; color: var(&#45;&#45;primary-color);">53</p>-->
+    <!--                <p>Led team in service aces</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <div class="bio-content mt-2">-->
+    <!--        <h3 style="color: var(&#45;&#45;primary-color); margin-bottom: 1rem;">2022 Freshman Season Stats</h3>-->
+    <!--        <div class="academics-grid">-->
+    <!--            <div class="course-category">-->
+    <!--                <h3>Assists</h3>-->
+    <!--                <p style="font-size: 2rem; font-weight: bold; color: var(&#45;&#45;primary-color);">13</p>-->
+    <!--            </div>-->
+    <!--            <div class="course-category">-->
+    <!--                <h3>Kills</h3>-->
+    <!--                <p style="font-size: 2rem; font-weight: bold; color: var(&#45;&#45;primary-color);">246</p>-->
+    <!--                <p>Led team in kills</p>-->
+    <!--            </div>-->
+    <!--            <div class="course-category">-->
+    <!--                <h3>Hitting %</h3>-->
+    <!--                <p style="font-size: 2rem; font-weight: bold; color: var(&#45;&#45;primary-color);">.426</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+</section>
+
+<!-- Career Timeline -->
+<section id="timeline" class="container">
+    <h2 class="section-title">Career Timeline</h2>
+    <div class="timeline">
+        <!-- 2025 -->
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="timeline-year">2025</span>
+                <h3>Senior Season</h3>
+                <h4>Lakeville North High School - Captain</h4>
+                <ul>
+                    <li>2,000 Assists, 1,000 Kills, 500 Digs Milestones</li>
+                    <li>Star Tribune Athlete of the Week</li>
+                    <li>MNVBCA All-State Tournament Team</li>
+                    <li>Leading team in kills, assists, and aces</li>
+                </ul>
             </div>
         </div>
-    </header><!-- .header -->
 
-    <div class="content">
-        <div class="container">
+        <!-- 2024 -->
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="timeline-year">2024</span>
+                <h3>Club Season - Mizuno Northern Lights 17-1</h3>
+                <h4>Setter, Right Side Hitter</h4>
+                <ul>
+                    <li>USA Nationals Champion - 17 American Division</li>
+                    <li>Tournament MVP</li>
+                    <li>All-Tournament Team Selection</li>
+                    <li>JVA All-Nationals Team - Top player nationally for Class of 2026</li>
+                    <li>Verbally committed to Creighton University</li>
+                </ul>
+            </div>
+        </div>
 
-            <!-- START: PAGE CONTENT -->
-            <section id="about" class="section section-about">
-                <div class="animate-up">
-                    <div class="section-box">
-                        <div class="profile">
-                            <div class="row">
-                                <div class="col-xs-5">
-                                    <div class="profile-photo"><img src="src/rayna_christianson_cover.jpg"
-                                                                    alt="Rayna Christianson"></div>
-                                </div>
-                                <div class="col-xs-7">
-                                    <div class="profile-info">
+        <!-- 2023 -->
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="timeline-year">2023</span>
+                <h3>Junior Season</h3>
+                <h4>Lakeville North High School - Captain</h4>
+                <ul>
+                    <li>Star Tribune All-Metro First Team</li>
+                    <li>Minnesota All-State</li>
+                    <li>Pioneer Press East Metro Player of the Year Finalist</li>
+                    <li>540 assists, 280 kills, 53 aces</li>
+                    <li>Selected to USA Volleyball NTDP</li>
+                </ul>
+            </div>
+        </div>
 
-                                        <h1 class="profile-title">Rayna Christianson</h1>
+        <!-- 2023 Club -->
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="timeline-year">2023</span>
+                <h3>Club Season - Mizuno Northern Lights 16-1</h3>
+                <h4>Setter, Right Side Hitter, Middle Blocker</h4>
+                <ul>
+                    <li>Fall Stars: Class of 2026 - Top 40 in the Nation</li>
+                    <li>Ranked #1 Setter in Minnesota by PrepDig.com</li>
+                </ul>
+            </div>
+        </div>
 
-                                        <h2 class="profile-position">Setter, Right Side and Middle Hitter</h2>
-                                    </div>
-                                    <dl class="profile-list">
-                                        <dt>Class</dt>
-                                        <dd>2026</dd>
-                                        <dt>Club</dt>
-                                        <dd>
-                                            <a href="https://www.northernlightsjuniors.org/2023/player.php?year=2023&id=456494&team=151"
-                                               target="_blank">Mizuno Northern Lights Juniors</dd>
-                                        <dt>High School</dt>
-                                        <dd><a href="https://www.panther-volleyball.com" target="_blank">Lakeville North
-                                            High School</a></dd>
-                                        <dt>E-mail</dt>
-                                        <dd><a href="mailto:raynachristianson@icloud.com	">raynachristianson@icloud.com</a>
-                                        </dd>
-                                        <dt>Contact</dt>
-                                        <dd><a href="tel:+6127083858">(612) 708-3858</a></dd>
-                                        <dt class="profile-vacation"><span>Height</span></dt>
-                                        <dd class="profile-vacation">6'2"</dd>
-                                        <dt class="profile-vacation"><span>Approach Jump</span></dt>
-                                        <dd class="profile-vacation">10'</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="profile-social">
-                            <ul class="social">
-                                <li><a class="ripple-centered" href="https://twitter.com/Rayna2026" target="_blank"><i
-                                        class="icon icon-twitter"></i></a></li>
-                                <li><a class="ripple-centered" href="https://www.instagram.com/rayna.christianson/"
-                                       target="_blank"><i class="icon icon-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- 2022 -->
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="timeline-year">2022</span>
+                <h3>Sophomore Season</h3>
+                <h4>Lakeville North High School - Captain</h4>
+                <ul>
+                    <li>Led team in assists, kills, and aces</li>
+                    <li>Star Tribune All-Metro First Team</li>
+                    <li>All-State Team</li>
+                    <li>All-Conference</li>
+                </ul>
+            </div>
+        </div>
 
-                    <div class="profile-text">
-                        <img src="img/creighton.png"/>
-                        <h2 style="font-weight: 900;margin-top: 20px;color:#015294">COMMITTED</h2>
-                        <p>
-                            I am a 6’2” Setter/Right Side/Middle and captain at Lakeville North High School, as well as a
-                            member of the Mizuno Northern Lights Juniors Club Team. I have verbally committed to play
-                            Division I volleyball at Creighton University. In 2023, I led my high school varsity team
-                            in kills, aces, and assists, earned <a
-                                href="https://www.startribune.com/minnesota-all-metro-volleyball-teams-high-school-twin-cities-star-tribune/600317839/">Star Tribune All-Metro First Team</a>
-                            and <a
-                                href="https://www.mnvbca.org/2023-all-state.html">Minnesota All-State</a>
-                            honors, and was a finalist for the <a
-                                href="https://www.twincities.com/2023/11/07/east-metro-volleyball-player-of-the-year-nova-classical-academys-ava-ball/amp/">Pioneer Press East Metro Player of the Year</a>. This past club
-                            season, I helped lead my team to a USA Nationals championship in the 17 American division,
-                            where I was named MVP and selected to the All-Tournament Team.
-</p>
-                    </div>
+        <!-- 2022 Club -->
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="timeline-year">2022</span>
+                <h3>Club Season - Mizuno Northern Lights 15-1</h3>
+                <h4>Setter and Right Side Hitter</h4>
+                <ul>
+                    <li>Strong all-around performance</li>
+                    <li>Building foundation for future success</li>
+                </ul>
+            </div>
+        </div>
 
-                    <!--						<div class="profile-btn">-->
-                    <!--							<a class="btn btn-border ripple" href="resume.png" target="_blank">Download Profile</a>-->
-                    <!--						</div>-->
+        <!-- 2021 -->
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="timeline-year">2021</span>
+                <h3>Freshman Season</h3>
+                <h4>Lakeville North High School - Varsity Starter</h4>
+                <ul>
+                    <li>Led team in hitting percentage (.426)</li>
+                    <li>Led in solo blocks (14) and block assists (44)</li>
+                    <li>40 aces from 276 serves</li>
+                    <li>Team finished 2nd place in AAAA State Tournament</li>
+                    <li>South Suburban All-Conference</li>
+                </ul>
+            </div>
+        </div>
 
-                    <hr class="profile-line">
+        <!-- 2021 Club -->
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="timeline-year">2021</span>
+                <h3>Club Season - Mizuno Northern Lights 14-1</h3>
+                <h4>Setter and Right Side Hitter</h4>
+                <ul>
+                    <li>AAU Nationals - 3rd place in Open division</li>
+                    <li>USA Volleyball Nationals - 4th place in National division</li>
+                    <li>VballRecruiter.com 2022 Club All-American (14s)</li>
+                    <li>AAU 14 Open All-Tournament Team</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2020 -->
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="timeline-year">2020</span>
+                <h3>8th Grade</h3>
+                <h4>Lakeville North High School - Varsity Starter</h4>
+                <ul>
+                    <li>Started as Middle Blocker/Hitter</li>
+                    <li>Led team in hitting percentage (.386)</li>
+                    <li>Led in solo blocks and block assists</li>
+                    <li>Team finished consolation champions in AAAA State Tournament</li>
+                    <li>South Suburban All-Conference Honorable Mention</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2020 Club -->
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <span class="timeline-year">2020</span>
+                <h3>Club Season - Mizuno Northern Lights 13-1</h3>
+                <h4>Setter and Right Side Hitter</h4>
+                <ul>
+                    <li>All-American All Star Team</li>
+                    <li>AAU Nationals - 3rd place finish</li>
+                    <li>Strong foundation year</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Honors & Awards -->
+<section id="honors" class="container">
+    <h2 class="section-title">Honors & Recognition</h2>
+    <div class="honors-grid">
+        <div class="honor-card">
+            <a href="https://panther-volleyball.com/" target="_blank">
+                <div class="honor-thumbnail">
+                    <img src="img/milestone.jpg"
+                         alt="2000 Assists, 1000 Kills, 500 Digs Milestone">
+                    <span class="external-link-badge">🔗</span>
                 </div>
-            </section><!-- #about -->
-
-            <section id="stats" class="section section-skills">
-                <div class="animate-up">
-                    <h2 class="section-title">Stats</h2>
-                    <div class="section-box">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Height</span>
-                                        <span class="bar-value">74" - 6'2"</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="100%"></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Standing Reach</span>
-                                        <span class="bar-value"> 95" - 7'11"</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="100%"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Block Jump</span>
-                                        <span class="bar-value">108" - 9'0"</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="100%"></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Approach Jump</span>
-                                        <span class="bar-value">120" - 10'</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="100%"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Grad Year</span>
-                                        <span class="bar-value">2026</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="100%"></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Current GPA</span>
-                                        <span class="bar-value">4.1</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="100%"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <h3>High School Varsity Career - 2021 (8th grade) - 2025 (Senior)</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Assists</span>
-                                        <span class="bar-value">2,194</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="100%"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Kills</span>
-                                        <span class="bar-value">1,104</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="100%"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Hitting %</span>
-                                        <span class="bar-value">0.343</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="100%"></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Aces</span>
-                                        <span class="bar-value">206</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="100%"></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Digs</span>
-                                        <span class="bar-value">621</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="100%"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Blocks</span>
-                                        <span class="bar-value">249</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="100%"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="honor-content">
+                    <span class="year">2025</span>
+                    <h3>Career Milestones Achieved</h3>
+                    <p>Reached 2,000 career assists, 1,000 career kills, and 500 career digs - rare achievement
+                        demonstrating versatility and consistency across all aspects of the game.</p>
+                    <span class="read-more">Read More →</span>
                 </div>
-            </section>
-            <section id="volleyball" class="section section-experience">
-                <div class="animate-up">
-                    <h2 class="section-title animate">Volleyball Accolades</h2>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;"><img src="img/panther_announcements.png"/></h2>
-                        <div class="col-sm-3"><a href="img/milestone.jpg" target="_blank"><img
-                                src="img/milestone.jpg"
-                                style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a></div>
-                        <div class="col-sm-9">
-                            <h3>2,000 Assists, 1,000 Kills, 500 Digs Milestones</h3>
-                            <h5>Rayna Christianson - Lakeville North</h5>
-                            <p>Congratulations to Girls Volleyball Player, Rayna Christianson! On Tuesday night, Rayna scored her 2,000th assist to go along with her previous milestones of 500 digs and 1,000 kills! Rayna was also a Star Tribune Athlete of the Week last week! Congratulations Rayna! (Added 9/22/25)</p>
-                        </div>
-                    </div>
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;"><img src="img/star_trib_logo.png"/></h2>
-                        <div class="col-sm-3"><a href="https://varsity.startribune.com/strib-varsity-athletes-of-the-week-minnesota-high-schools/601467224?utm_source=startribune&utm_medium=referral&utm_campaign=homepage" target="_blank"><img
-                                src="img/athlete_of_the_week.jpg"
-                                style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a></div>
-                        <div class="col-sm-9">
-                            <h3>Star Tribune Athlete of the Week</h3>
-                            <h5>Rayna Christianson - Lakeville North</h5>
-                            <p>The 6-2 setter/right side led the Panthers, who moved up to No. 1 in this week’s Class 4A poll, to eight victories in their first nine matches. Christianson, an all-state selection last season who has committed to play for Creighton in college, leads the Panthers with 78 kills and also has 140 set assists and 45 digs.</p>
-                        </div>
-                    </div>
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;"><img src="img/star_trib_logo.png"/></h2>
-                        <div class="col-sm-3"><a href="https://www.startribune.com/john-yunker-high-school-volleyball-coach-moves-lakeville-north-champlin-park/601445779" target="_blank"><img
-                                src="img/star_trib_yunker.jpg"
-                                style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a></div>
-                        <div class="col-sm-9">
-                            <h3>Volleyball coach John Yunker arrives at Lakeville North after 14 seasons at Champlin Park</h3>
-                            <h5>Senior, 6-2, setter/right side hitter</h5>
-                            <p>The article spotlights Rayna Christianson as one of the nation’s top setters, a Creighton recruit, and a contender for Miss Volleyball. Fresh off a USA Volleyball junior national title, she credits former coach Jackie Richter for shaping her skills, leadership, and love for the game.</p>
-                            <p>Rayna Christianson never expected to experience a coaching change going into her senior volleyball season at Lakeville North.</p>
+            </a>
+        </div>
 
-                                <p>One of the nation’s top setters and a Creighton recruit, Christianson saw her mentor, Jackie Richter, depart to become a Division I assistant at St. Thomas this year. She was replaced by Champlin Park’s longtime coach, John Yunker.</p>
-
-                                <p>“Jackie helped me so much with becoming a better player and better person on the court,” Christianson said. “She kind of made me love the sport of volleyball.”</p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;margin-top: 10px;"><img src="img/mnvbca.png"/></h2>
-                        <div class="col-sm-3"><a href="https://www.mnvbca.org/all-star-match.html" target="_blank"><img src="img/all_star.jpg"
-                                                                                          style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a>
-                        </div>
-                        <div class="col-sm-9">
-                            <h3>All-State Tournament Team MNVBCA ‘25</h3>
-                            <p>Selected to the Minnesota Volleyball Coaches Association All-Star Team, recognizing one of the top senior players in the state and providing the opportunity to compete in the annual All-Star Match during the MNVBCA Coaches Clinic.</p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;"><img src="img/star_trib_logo.png"/></h2>
-                        <div class="col-sm-3"><a href="https://www.startribune.com/minnesota-select-northern-lights-girls-volleyball-players-elena-hoecke-rayna-christianson-aau/601384899" target="_blank"><img
-                                src="img/star_trib_christianson_hoeke.jpg"
-                                style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a></div>
-                        <div class="col-sm-9">
-                            <h3>Minnesota’s top-rated volleyball seniors Elena Hoecke, Rayna Christianson finish club careers shining on national stage</h3>
-                            <p>Rayna Christianson, Lakeville North’s elite setter and a Creighton recruit, capped her club career by leading Northern Lights’ 17‑under team to victory at the USA Volleyball junior nationals in Dallas, earning MVP honors. She reflected on the bittersweet end to her season, crediting her deep bonds with teammates for elevating their performance on court.</p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;"><img src="img/sun_logo.jpg"/></h2>
-                        <div class="col-sm-3"><a href="https://www.hometownsource.com/sun_thisweek/sports/northern-lights-club-collects-volleyball-championships/article_ba510088-3a1b-4b86-8ba6-3b0581babc5a.html" target="_blank"><img
-                                src="img/sun.jpg"
-                                style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a></div>
-                        <div class="col-sm-9">
-                            <h3>Northern Lights club collects volleyball championships</h3>
-                            <p>Lakeville North incoming senior Rayna Christianson was named MVP in the girls 17 American Division, helping lead Northern Lights to an 11-1 record in the national tournament and the division championship.</p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;"><img src="img/usa_volleyball_only.png"/></h2>
-                        <div class="col-sm-3"><a href="https://usavolleyball.org/2025-gjnc-14-17-all-tournament-teams/" target="_blank"><img
-                                src="img/mvp.jpg"
-                                style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a></div>
-                        <div class="col-sm-9">
-                            <h3>MVP- National Champs American Div - USA Volleyball - Dallas, TX</h3>
-                            <p>Rayna Christianson led Northern Lights to the 17 American division championship at the USA Volleyball Nationals in Dallas, TX. Her outstanding performance earned her both MVP honors and selection to the All-Tournament Team, capping an exceptional club season with a national title.</p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;"><img src="img/jva_logo_trademark.png" style="width: 150px;padding: 20px;"/></h2>
-                        <div class="col-sm-3"><a href="https://jvavolleyball.org/2025-jva-girls-all-national-team-class-of-2026/" target="_blank"><img
-                                src="img/jva_national.JPG"
-                                style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a></div>
-                        <div class="col-sm-9">
-                            <h3>JVA Award - All-Natl team selection 2025 - 17-1’s</h3>
-                            <p>Rayna Christianson was named to the 2025 All-Nationals Team by the JVA, recognizing her as one of the top female club players in the nation for the class of 2026, honoring her outstanding achievement and performance on the volleyball court.</p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;margin-top: 10px;"><img src="img/usa_volleyball.png"/></h2>
-                        <div class="col-sm-3"><a href="img/ntdp_spring.png" target="_blank"><img src="img/ntdp_spring.png"
-                                                                                          style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a>
-                        </div>
-                        <div class="col-sm-9">
-                            <h3>Rayna Christianson, NTDP Training Series - 2023 - 2025</h3>
-                            <p>Selected to and attended the National Team Development Program for USA Volleyball at the Olympic Training Center. </p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;margin-top: 10px;"><img src="img/creighton_logo.png"/></h2>
-                        <div class="col-sm-3"><a href="https://www.norfolkneradio.com/sports/creighton-volleyball-lands-commit-from-top-minnesota-setter-rayna-christianson/article_69abf6ea-2fca-11ef-865f-1f1c1c5727e7.html" target="_blank"><img src="img/creighton.png"
-                                                                                          style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a>
-                        </div>
-                        <div class="col-sm-9">
-                            <h3>Creighton volleyball lands commit from top Minnesota setter Rayna Christianson</h3>
-                            <p>Christianson is the No. 1 2026 prospect in Minnesota according to PrepDig.com. She was the only sophomore on Minnesota’s 4A All-State first team in 2023. As a sophomore at Lakeville North, she had 540 assists, 280 kills and 53 service aces....</p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;"><img src="img/prep_dig_logo.png"
-                                                             style="width:200px;margin-top:10px;"/></h2>
-                        <div class="col-sm-3"><a href="https://prepdig.com/minnesota/rankings/2026-rankings/"
-                                                 target="_blank"><img src="img/ranked.jpeg"
-                                                                      style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a>
-                        </div>
-                        <div class="col-sm-9">
-                            <h3>Ranked #1 setter in Minnesota for 2026 on PrepDig.com</h3>
-                            <h5>View my profile on <a href="https://prepdig.com/player/rayna-christianson/"
-                                                      target="_blank">PrepDig.com</a></h5>
-                            <p>"Christianson is a quality athlete with size, skills, and finesse to be a high level
-                                setter at the next level. Her length and athleticism helps her set the ball from
-                                anywhere to anywhere on the court. She has consistent location and can run a number of
-                                different tempos on offense."</p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;"><img src="img/prep_volleyball_logo.png" style="width:200px;"/>
-                        </h2>
-                        <div class="col-sm-3"><a
-                                href="https://prepvolleyball.com/high-school/fall-stars-class-2026-part-1-2586"
-                                target="_blank"><img src="img/prepvolleyball_thumb.png"
-                                                     style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a>
-                        </div>
-                        <div class="col-sm-9">
-                            <h3>Fall Stars: The Class of 2026</h3>
-                            <h5>Top 40 in the Nation</h5>
-                            <p>The Fall Star Award is aimed toward players who were strong standouts in their state and
-                                classification, supporting their respective side's efforts through the 2023 campaign.
-                                Some exceptional sophomores step center stage today to be recognized for their steadfast
-                                work, and sportsmanship throughout the fall season!</p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;"><img src="img/star_trib_logo.png"/></h2>
-                        <div class="col-sm-3"><a href="img/star_trib.png" target="_blank"><img
-                                src="img/star_trib_thumb.png"
-                                style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a></div>
-                        <div class="col-sm-9">
-                            <h3>2023 Star Tribune All-Metro First Team</h3>
-                            <h5>Sophomore, 6-2, setter/right side hitter</h5>
-
-                            <p>Excels at a dual role for the Panthers. With more than a week left in the season, she led
-                                the team in kills (249), service aces (49) and set assists (485). Her versatility and
-                                poise allowed for a smooth transition from 2022 Ms. Volleyball finalist Ava Blascziek.
-                                Dynamite athlete. College: undecided</p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;margin-top: 10px;"><img src="img/mnvbca.png"/></h2>
-                        <div class="col-sm-3"><a href="https://www.mnvbca.org/2023-all-state.html" target="_blank"><img
-                                src="img/mnvbca_logo.png"
-                                style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a></div>
-                        <div class="col-sm-9">
-                            <h3>2023 Minnesota Volleyball Coaches Association All-State</h3>
-                            <p>Named to the All-State team for Class AAAA for the Minnesota Volleyball Coaches
-                                Association</p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;"><img src="img/pioneer_press_logo.png"/></h2>
-                        <div class="col-sm-3"><a href="img/pioneer_press.png" target="_blank"><img
-                                src="img/pioneer_press_thumb.png"
-                                style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a></div>
-                        <div class="col-sm-9">
-                            <h3>2023 East Metro Player of the Year Finalist</h3>
-                            <p>Athletic and good at seemingly everything, Christianson figures to have the Panthers in
-                                title contention for years to come.</p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;margin-top: 10px;"><img src="img/usa_volleyball.png"/></h2>
-                        <div class="col-sm-3"><a href="img/ntdp.png" target="_blank"><img src="img/ntdp_thumb.png"
-                                                                                          style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a>
-                        </div>
-                        <div class="col-sm-9">
-                            <h3>Rayna Christianson, NTDP Training Series - Fall 2023</h3>
-                            <p>Selected to and attended the National Team Development Program for USA Volleyball at the
-                                Olympic Training Center in Colorado Spring, CO. </p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <div class="row"
-                         style="border: 1px solid #DDDDDD;border-radius: 10px;margin: 20px;background-color:#ffffff;">
-                        <h2 style="text-align: center;"><img src="img/vballrecruiter_logo.png"
-                                                             style="width:200px;"/></h2>
-                        <div class="col-sm-3"><a
-                                href="https://prepvolleyball.com/high-school/fall-stars-class-2026-part-1-2586"
-                                target="_blank"><img src="img/prepvolleyball_thumb.png"
-                                                     style="border: 1px solid #c30202;margin-bottom: 10px;padding:10px;"/></a>
-                        </div>
-                        <div class="col-sm-9">
-                            <h3>Vball Recruiter - 5 Star Recruit</h3>
-                            <p><a href="">Vballrecruiter.com’s 2023 15s Club All-Americans</a></p>
-                            <p><a href="">AAU 15 Open: Preview And Predictions</a></p>
-                            <p><a href="">Lone Star Classic: Preview and Predictions</a></p>
-                            <p><a href="">Show Me All-Tournament Teams</a></p>
-                            <p><a href="">Show Me: Day 1 Show Stoppers And More</a></p>
-                            <p><a href="">Club: 15s Preseason All-Americans</a></p>
-                        </div>
-                    </div>
-                    <hr class="profile-line">
-                    <h2 class="section-title animate">Timeline/Teams</h2>
-
-                    <div class="timeline">
-                        <div class="timeline-bar" style="top: 80px; height: 596px;"></div>
-                        <div class="timeline-box timeline-box-right" style="position: absolute; right: 0px; top: 0px;">
-                            <span class="dot"></span>
-                            <div class="timeline-box-inner animate-left">
-                                <span class="arrow"></span>
-                                <div class="date">2024-2025</div>
-                                <h3>Mizuno Northern Lights 17-1</h3>
-                                <p>Setter, Right Side Hitter - All Around</p>
-                            </div>
-                        </div>
-                        <div class="timeline-box timeline-box-right" style="position: absolute; right: 0px; top: 0px;">
-                            <span class="dot"></span>
-                            <div class="timeline-box-inner animate-left">
-                                <span class="arrow"></span>
-                                <div class="date">2023-2024</div>
-                                <h3>Mizuno Northern Lights 16-1</h3>
-                                <p>Setter, Right Side Hitter and Middle Blocker - All Around</p>
-                            </div>
-                        </div>
-                        <div class="timeline-inner clearfix" style="height: 857px;">
-                            <div class="timeline-box timeline-box-left"
-                                 style="position: absolute; left: 0px; top: 0px;">
-                                <span class="dot"></span>
-                                <div class="timeline-box-inner animate-right">
-                                    <span class="arrow"></span>
-                                    <div class="date">2025</div>
-                                    <h3>Lakeville North HS Varsity Team</h3>
-                                    <h4>Senior - Captain - S</h4>
-                                </div>
-                            </div>
-                            <div class="timeline-box timeline-box-left"
-                                 style="position: absolute; right: 0px; top: 0px;">
-                                <span class="dot"></span>
-                                <div class="timeline-box-inner animate-left">
-                                    <span class="arrow"></span>
-                                    <div class="date">2024</div>
-                                    <h3>Lakeville North HS Varsity Team</h3>
-                                    <h4>Junior - Captain - Setter</h4>
-                                </div>
-                            </div>
-                            <div class="timeline-box timeline-box-right"
-                                 style="position: absolute; right: 0px; top: 0px;">
-                                <span class="dot"></span>
-                                <div class="timeline-box-inner animate-left">
-                                    <span class="arrow"></span>
-                                    <div class="date">2022-2023</div>
-                                    <h3>Mizuno Northern Lights 15-1</h3>
-                                    <p>Setter and Right Side Hitter - All Around</p>
-                                </div>
-                            </div>
-                            <div class="timeline-box timeline-box-left"
-                                 style="position: absolute; left: 0px; top: 0px;">
-                                <span class="dot"></span>
-                                <div class="timeline-box-inner animate-right">
-                                    <span class="arrow"></span>
-                                    <div class="date">2023</div>
-                                    <h3>Lakeville North HS Varsity Team</h3>
-                                    <h4>Sophomore - Captain - S/RS/MH</h4>
-                                    <p>Lead the team in:</p>
-                                    <ul>
-                                        <li>Assists - 540</li>
-                                        <li>Kills - 280</li>
-                                        <li>Aces - 53</li>
-                                    </ul>
-                                    <h5>AWARDS</h5>
-                                    <ul>
-                                        <li>Star Tribune All-Metro 1st Team</li>
-                                        <li>All-State Team</li>
-                                        <li>Pioneer Press East Metro Finalist</li>
-                                        <li>All-Conference</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="timeline-box timeline-box-left"
-                                 style="position: absolute; left: 0px; top: 286px;">
-                                <span class="dot"></span>
-                                <div class="timeline-box-inner animate-right">
-                                    <span class="arrow"></span>
-                                    <div class="date">2022-2023</div>
-                                    <h3>Lakeville North HS Varsity Team</h3>
-                                    <h4>Freshman - MB</h4>
-                                    <p>Lead the team in:</p>
-                                    <ul>
-                                        <li>Hitting percentage - 246 total kills, 54 errors from 451 attempts = .426
-                                        </li>
-                                        <li>Solo blocks (14) and block assists (44)</li>
-                                        <li>40 aces from 276 serves</li>
-                                        <li>Helped the team to 2nd place in the AAAA MN state tournament in 2022</li>
-                                    </ul>
-                                    <h5>AWARDS</h5>
-                                    <ul>
-                                        <li>South Suburban All-Conference</li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                            <div class="timeline-box timeline-box-right"
-                                 style="position: absolute; right: 0px; top: 356px;">
-                                <span class="dot"></span>
-                                <div class="timeline-box-inner animate-left">
-                                    <span class="arrow"></span>
-                                    <div class="date">2021-2022</div>
-                                    <h3>Mizuno Northern Lights 14-1</h3>
-                                    <p>Setter and Right Side Hitter - All Around</p>
-                                    <ul>
-                                        <li>AAU Nationals in Orlando, FL - 3rd place in Open division</li>
-                                        <li>USA Volleyball Nationals in Indianapolis, IN - 4th place in National
-                                            division
-                                        </li>
-                                    </ul>
-                                    <ul>
-                                        <li>Volleyball Recruiter.com named 2022 Club All-American for 14s</li>
-                                        <li><a href="https://vballrecruiter.com/aau-14-open-all-tournament-team/">AAU 14
-                                            Open: All-Tournament Team</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="timeline-box timeline-box-left"
-                                 style="position: absolute; left: 0px; top: 0px;">
-                                <span class="dot"></span>
-                                <div class="timeline-box-inner animate-right">
-                                    <span class="arrow"></span>
-                                    <div class="date">2020-2021</div>
-                                    <h3>Lakeville North HS Varsity Team</h3>
-                                    <h4>8th Grade</h4>
-                                    <p>Varsity starter at Middle Blocker/Hitter leading the team in hitting percentage
-                                        (.386), solo blocks and block assists helping the team to the consolation
-                                        championship in the AAAA MN state tournament in 2021.</p>
-                                    <p>Received South Suburban All Conference Honorable Mention for 2021 season.</p>
-                                </div>
-                            </div>
-                            <div class="timeline-box timeline-box-right"
-                                 style="position: absolute; right: 0px; top: 0px;">
-                                <span class="dot"></span>
-                                <div class="timeline-box-inner animate-left">
-                                    <span class="arrow"></span>
-                                    <div class="date">2020-2021</div>
-                                    <h3>Mizuno Northern Lights 13-1</h3>
-                                    <p>Setter and Right Side Hitter - All Around</p>
-                                    <p>Named to the All-American All Star Team at the 2021 AAU Volleyball National
-                                        Championships in Orlando, FL and helped our team take 3rd in their division.</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-box timeline-box-left"
-                                 style="position: absolute; left: 0px; top: 0px;">
-                                <span class="dot"></span>
-                                <div class="timeline-box-inner animate-right">
-                                    <span class="arrow"></span>
-                                    <div class="date">2019-2020</div>
-                                    <h3>Lakeville North HS 9A Team</h3>
-                                    <h4>7th Grade</h4>
-                                    <p>Setter and Right Side Hitter</p>
-                                </div>
-                            </div>
-                            <div class="timeline-box timeline-box-right"
-                                 style="position: absolute; right: 0px; top: 0px;">
-                                <span class="dot"></span>
-                                <div class="timeline-box-inner animate-left">
-                                    <span class="arrow"></span>
-                                    <div class="date">2017-2019</div>
-                                    <h3>Lakeville North Juniors 12-1</h3>
-                                    <h4>10 & 11 year old</h4>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
+        <div class="honor-card">
+            <a href="https://www.mnvbca.org/2023-all-state.html" target="_blank">
+                <div class="honor-thumbnail">
+                    <img src="img/mnvbca_logo.png"
+                         alt="MNVBCA All-State Tournament Team">
+                    <span class="external-link-badge">🔗</span>
                 </div>
-            </section><!-- #experience -->
-
-
-            <!-- #skills -->
-
-            <section id="highlight" class="section section-interests">
-                <div class="animate-up">
-                    <h2 class="section-title">Highlight Film</h2>
-
-                    <div class="section-box">
-                        <div class="video-container">
-                            <div class="row">
-                                <div class="col-xs-12 col-md-6">
-                                    <iframe src="https://www.youtube.com/embed/FtViSVnXTH8"
-                                            title="Rayna Christianson Volleyball Highlight Film First 11 Games 2024" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    <h5>2024 First 11 Games of Club Season</h5>
-                                </div>
-                                <div class="col-xs-12 col-md-6">
-                                    <iframe src="https://www.youtube.com/embed/FPD0LoyF3Po"
-                                            title="Rayna Christianson Volleyball Highlight Film" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    <h5>2022 - 2023 Club and High School Seasons</h5>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="honor-content">
+                    <span class="year">2025</span>
+                    <h3>MNVBCA All-State Tournament Team</h3>
+                    <p>Selected to the Minnesota Volleyball Coaches Association All-Star Team, recognizing one of the
+                        top senior players in the state.</p>
+                    <span class="read-more">Read More →</span>
                 </div>
-            </section>
+            </a>
+        </div>
 
-            <section id="hobbies" class="section section-interests">
-                <div class="animate-up">
-                    <h2 class="section-title">Hudl</h2>
-
-                    <div class="section-box">
-
-                        <p><a href="https://www.hudl.com/profile/16554610/Rayna-Christianson/highlights"
-                              target="_blank">
-                            <img src="src/hudl_logo.png" alt="Rayna Christianson Hudl Profile"/><br/>View all my
-                            highlights on Hudl.com</a></p>
-                    </div>
+        <div class="honor-card">
+            <a href="#" onclick="event.preventDefault(); alert('JVA All-Nationals Team announcement');">
+                <div class="honor-thumbnail">
+                    <img src="img/jva_national.JPG" alt="JVA All-Nationals Team">
                 </div>
-            </section>
-
-            <!-- Start Video Section  -->
-
-            <section id="video" class="section section-portfolio">
-                <div class="animate-up">
-                    <h2 class="section-title">Video</h2>
-
-
-                    <!-- Large Photo  -->
-
-                    <div class="grid" style="position: relative; height: 597.25px;">
-                        <div class="grid-sizer"></div>
-
-                        <div class="grid-item size22 photography">
-                            <div class="grid-box">
-                                <figure class="portfolio-figure">
-                                    <img src="src/video-1.jpg" alt="">
-                                    <figcaption class="portfolio-caption">
-                                        <div class="portfolio-caption-inner">
-                                            <h3 class="portfolio-title">Lakeville North vs East Ridge</h3>
-                                            <h4 class="portfolio-cat">HIGH SCHOOL</h4>
-
-                                            <div class="btn-group">
-                                                <a class="portfolioFancybox btn-zoom"
-                                                   data-fancybox-group="portfolioFancybox1"
-                                                   href="https://www.youtube.com/watch?v=abxzpQh4DyA" target="_blank"><i
-                                                        class="icon icon-eye"></i></a>
-                                            </div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-
-                            </div>
-                        </div><!-- Video Thumbnail Small -->
-
-                        <div class="grid-item size11 bridge">
-                            <div class="grid-box">
-                                <figure class="portfolio-figure">
-                                    <img src="https://vi.hudl.com/p-highlights/User/16554610/65437c8b664bdb13b8106f37/4e67073e_360.jpg?v=60D036EB90DBDB08&"
-                                         alt="">
-                                    <figcaption class="portfolio-caption">
-                                        <div class="portfolio-caption-inner">
-                                            <h3 class="portfolio-title">13 Kills vs Chaska</h3>
-                                            <h4 class="portfolio-cat">High School</h4>
-
-                                            <div class="btn-group">
-                                                <a class="portfolioFancybox btn-zoom"
-                                                   data-fancybox-group="portfolioFancybox2"
-                                                   href="https://www.hudl.com/video/3/16554610/650ab647578ee30abc6e56a4"
-                                                   target="_blank"><i class="icon icon-eye"></i></a>
-                                            </div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-
-
-                            </div>
-                        </div>
-                        <div class="grid-item size11 nature photography">
-                            <div class="grid-box">
-                                <figure class="portfolio-figure">
-                                    <img src="//vi.hudl.com/p-highlights/User/16554610/631cf89f57982a0b287ecfc7/32b157b3_360.jpg?v=7A51EC416E93DA08"
-                                         alt="">
-                                    <figcaption class="portfolio-caption">
-                                        <div class="portfolio-caption-inner">
-                                            <h3 class="portfolio-title">6 Kills vs Marshall</h3>
-                                            <h4 class="portfolio-cat">High School</h4>
-
-                                            <div class="btn-group">
-                                                <a class="portfolioFancybox btn-zoom"
-                                                   data-fancybox-group="portfolioFancybox3"
-                                                   href="https://www.hudl.com/video/3/16554610/631f95c93448a80378e4d10a"
-                                                   target="_blank"><i class="icon icon-eye"></i></a>
-                                            </div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-
-                            </div>
-                        </div>
-                        <div class="grid-item size11 nature photography">
-                            <div class="grid-box">
-                                <figure class="portfolio-figure">
-                                    <img src="//vi.hudl.com/p-highlights/User/16554610/631cf89f57982a0b287ecfc7/32b157b3_360.jpg?v=7A51EC416E93DA08"
-                                         alt="">
-                                    <figcaption class="portfolio-caption">
-                                        <div class="portfolio-caption-inner">
-                                            <h3 class="portfolio-title">6 Kills vs Marshall</h3>
-                                            <h4 class="portfolio-cat">High School</h4>
-
-                                            <div class="btn-group">
-                                                <a class="portfolioFancybox btn-zoom"
-                                                   data-fancybox-group="portfolioFancybox3"
-                                                   href="https://www.hudl.com/video/3/16554610/631f95c93448a80378e4d10a"
-                                                   target="_blank"><i class="icon icon-eye"></i></a>
-                                            </div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-
-                            </div>
-                        </div><!-- .grid-item -->
-                    </div>
-
+                <div class="honor-content">
+                    <span class="year">2025</span>
+                    <h3>JVA All-Nationals Team</h3>
+                    <p>Named to the 2025 All-Nationals Team, recognizing outstanding achievement as one of the top
+                        female club players in the nation for the Class of 2026.</p>
+                    <span class="read-more">Learn More →</span>
                 </div>
-            </section><!-- #portfolio -->
+            </a>
+        </div>
 
-
-            <section id="education" class="section section-education">
-                <div class="animate-up">
-                    <h2 class="section-title animate">Education and Academic Honors</h2>
-
-                    <div class="timeline">
-                        <div class="timeline-bar" style="top: 80px; height: 267px;"></div>
-                        <div class="timeline-inner clearfix" style="height: 439px;">
-                            <div class="timeline-box timeline-box-compact timeline-box-left"
-                                 style="position: absolute; left: 0px; top: 0px;">
-                                <span class="dot"></span>
-
-                                <div class="timeline-box-inner animate-right">
-                                    <span class="arrow"></span>
-                                    <div class="date"><span>High School</span></div>
-                                    <h3>Lakeville North High School, Lakeville, MN</h3>
-                                    <h4>Honors Track</h4>
-                                    <p>Lakeville North High School is a school with a high academic standard.<br>AP
-                                        classes include:
-                                    </p>
-                                    <ul>
-                                        <li>American Lit</li>
-                                        <li>US History</li>
-                                        <li>Advanced Algebra 2</li>
-                                        <li>Pre-Calc</li>
-                                        <li>Chem</li>
-                                        <li>Physics 1
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="timeline-box timeline-box-compact timeline-box-right"
-                                 style="position: absolute; right: 0px; top: 70px;">
-                                <span class="dot"></span>
-
-                                <div class="timeline-box-inner animate-left">
-                                    <span class="arrow"></span>
-                                    <div class="date"><span>Academic Interests</span></div>
-                                    <h3>Health</h3>
-                                    <h4>Biology, Sports Science</h4>
-                                </div>
-                            </div>
-
-
-                            <div class="timeline-box timeline-box-compact timeline-box-right"
-                                 style="position: absolute; right: 0px; top: 267px;">
-                                <span class="dot"></span>
-
-                                <div class="timeline-box-inner animate-left">
-                                    <span class="arrow"></span>
-                                    <div class="date"><span>Extra-Curriculars</span></div>
-                                    <h3>Basketball</h3>
-                                    <ul>
-                                        <li>AAU - North Tartan - 2020 & 2021</li>
-                                        <li>MN Crossfire - 2022</li>
-                                        <li>Lakeville North High School - 10A as a 7th Grader</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <!-- download transcripts button -->
-
-                    <!--				<div class="profile-btn">-->
-                    <!--							<a class="btn btn-border ripple" href="transcript.pdf" target="_blank">Download Transcript<br>(demo password is basketball)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-border ripple" href="transcript.pdf" target="_blank">Download ACT Scores<br>(demo password is basketball)</a>-->
-                    <!--						</div>-->
-
+        <div class="honor-card">
+            <a href="https://www.twincities.com/2024/06/29/minnesotas-top-rated-volleyball-seniors-elena-hoecke-rayna-christianson-finish-club-careers-shining-on-national-stage/"
+               target="_blank">
+                <div class="honor-thumbnail">
+                    <img src="img/mvp.jpg" alt="USA Nationals MVP">
+                    <span class="external-link-badge">🔗</span>
                 </div>
-            </section><!-- #education -->
-
-            <section id="references" class="section section-references">
-                <div class="animate-up">
-                    <h2 class="section-title">Accolades</h2>
-                    <div class="section-box">
-                        <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;">
-                            <div class="bx-viewport"
-                                 style="width: 100%; overflow: hidden; position: relative; height: 257px;">
-                                <ul class="ref-slider"
-                                    style="width: 515%; position: relative; transition-duration: 0s; transform: translate3d(-2430px, 0px, 0px);">
-                                    <li style="float: left; list-style: none; position: relative; width: 810px;"
-                                        class="bx-clone">
-                                        <div class="ref-box">
-                                            <div class="person-speech">
-                                                <p>What a talent Christianson is! At 6-2, she's long and is good enough
-                                                    setting and hitting it's hard to say which she is better at. She has
-                                                    great hands running the offense and is a total mismatch when
-                                                    attacking with her height.</p>
-                                            </div>
-                                            <div class="person-info clearfix">
-
-                                                <div class="person-name-title">
-                                                    <span class="person-name">Vballrecruiter.com <a
-                                                            href="https://vballrecruiter.com/aau-14s-18s-day-1-show-stoppers/">AAU 14s/18s: Day 1 Show Stoppers</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li style="float: left; list-style: none; position: relative; width: 810px;"
-                                        class="bx-clone">
-                                        <div class="ref-box">
-                                            <div class="person-speech">
-                                                <p>Christianson has tremendous upside and potential in her 6-2 frame.
-                                                    She has a strong, consistent delivery as a setter. And with her
-                                                    height, she can easily go over blockers and is a scoring threat all
-                                                    across the front row.</p>
-                                            </div>
-                                            <div class="person-info clearfix">
-
-                                                <div class="person-name-title">
-                                                    <span class="person-name">Vballrecruiter.com <a
-                                                            href="https://vballrecruiter.com/usav-14-15s-day-4-show-stoppers/">USAV 14/15s: Day 4 Show Stoppers</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="bx-controls"></div>
-                        </div>
-                        <div class="ref-slider-nav">
-                            <span id="ref-slider-prev" class="slider-prev"></span>
-                            <span id="ref-slider-next" class="slider-next"></span>
-                        </div>
-                    </div>
-
-
+                <div class="honor-content">
+                    <span class="year">2024</span>
+                    <h3>USA Nationals MVP - 17 American Division</h3>
+                    <p>Led Northern Lights to the championship with an 11-1 record at the USA Volleyball Nationals in
+                        Dallas, TX. Named tournament MVP and All-Tournament Team selection.</p>
+                    <span class="read-more">Read Article →</span>
                 </div>
-            </section>
+            </a>
+        </div>
 
-
-            <!-- #references -->
-
-
-            <section id="tournaments" class="section section-calendar">
-                <div class="animate-up">
-
-
-                    <h2 class="section-title">Tournament Schedule</h2>
-
-                    <div class="profile-btn">
-                        <a class="btn btn-border ripple"
-                           href="https://northernlightsjuniors.org/2024/schedule.php?year=2024&team=16-1"
-                           target="_blank">View Tournament Schedule
-
-                        </a>
-                    </div>
-
+        <div class="honor-card">
+            <a href="https://www.usavolleyball.org/ntdp/" target="_blank">
+                <div class="honor-thumbnail">
+                    <img src="img/ntdp_spring.png" alt="USA Volleyball NTDP">
+                    <span class="external-link-badge">🔗</span>
                 </div>
-                <hr class="profile-line">
-
-            </section>
-
-
-            <!-- contact -->
-
-            <section id="contact" class="section section-contact">
-                <div class="animate-up">
-                    <h4>
-                        <center>I'd Love to Hear From You! <br><br><a href="mailto:christianson.matt+rayna@gmail.com">Contact Me</a> or <a href="https://northernlightsjuniors.org/2024/schedule.php?year=2024&team=16-1" target="_blank">Download My Tournament Schedule</a> and
-                            Track Me at an upcoming Tournament
-                        </center>
-                    </h4>
-                    <br><br>
+                <div class="honor-content">
+                    <span class="year">2023-2025</span>
+                    <h3>USA Volleyball NTDP</h3>
+                    <p>Selected to and attended the National Team Development Program for USA Volleyball at the Olympic
+                        Training Center in Colorado Springs, CO.</p>
+                    <span class="read-more">View Program →</span>
                 </div>
-            </section><!-- #contact -->
-            <!-- END: PAGE CONTENT -->
+            </a>
+        </div>
 
-        </div><!-- .container -->
-    </div><!-- .content -->
+        <div class="honor-card">
+            <a href="https://www.startribune.com/minnesota-all-metro-volleyball-teams-high-school-twin-cities-star-tribune/600317839/"
+               target="_blank">
+                <div class="honor-thumbnail">
+                    <img src="img/star_trib_thumb.png"
+                         alt="Star Tribune All-Metro First Team">
+                    <span class="external-link-badge">🔗</span>
+                </div>
+                <div class="honor-content">
+                    <span class="year">2023</span>
+                    <h3>Star Tribune All-Metro First Team</h3>
+                    <p>Recognized as one of the top players in the Twin Cities metro area, excelling in dual role as
+                        setter and right side hitter.</p>
+                    <span class="read-more">Read Article →</span>
+                </div>
+            </a>
+        </div>
 
+        <div class="honor-card">
+            <a href="https://www.mnvbca.org/2023-all-state.html" target="_blank">
+                <div class="honor-thumbnail">
+                    <img src="img/mnvbca_logo.png" alt="Minnesota All-State">
+                    <span class="external-link-badge">🔗</span>
+                </div>
+                <div class="honor-content">
+                    <span class="year">2023</span>
+                    <h3>Minnesota All-State</h3>
+                    <p>Named to the All-State team for Class AAAA, only sophomore on the first team.</p>
+                    <span class="read-more">View List →</span>
+                </div>
+            </a>
+        </div>
 
-</div><!-- .wrapper -->
+        <div class="honor-card">
+            <a href="https://prepdig.com/player/rayna-christianson/" target="_blank">
+                <div class="honor-thumbnail">
+                    <img src="img/ranked.jpeg" alt="PrepDig #1 Setter">
+                    <span class="external-link-badge">🔗</span>
+                </div>
+                <div class="honor-content">
+                    <span class="year">2023</span>
+                    <h3>PrepDig.com #1 Setter in Minnesota</h3>
+                    <p>Ranked as the top setter in Minnesota for the Class of 2026, recognized for quality athleticism
+                        with size, skills, and finesse.</p>
+                    <span class="read-more">View Profile →</span>
+                </div>
+            </a>
+        </div>
 
-<div id="overlay"></div>
-<!-- Scripts -->
-<script type="text/javascript" src="src/jquery.js"></script>
-<script type="text/javascript" src="src/map-icons.min.js"></script>
-<script type="text/javascript" src="src/jquery.mousewheel-3.0.6.pack.js"></script>
-<script type="text/javascript" src="src/imagesloaded.pkgd.min.js"></script>
-<script type="text/javascript" src="src/isotope.pkgd.min.js"></script>
-<script type="text/javascript" src="src/jquery.appear.min.js"></script>
-<script type="text/javascript" src="src/jquery.bxslider.min.js"></script>
-<script type="text/javascript" src="src/jquery.mCustomScrollbar.concat.min.js"></script>
-<script type="text/javascript" src="src/mediaelement-and-player.min.js"></script>
-<script type="text/javascript" src="src/jquery.fancybox.pack.js"></script>
-<script type="text/javascript" src="src/jquery.fancybox-media.js"></script>
-<script type="text/javascript" src="src/site.min.js"></script>
+        <div class="honor-card">
+            <a href="https://vballrecruiter.com/fall-stars-the-class-of-2026/" target="_blank">
+                <div class="honor-thumbnail">
+                    <img src="img/prepvolleyball_thumb.png" alt="Fall Stars Top 40">
+                    <span class="external-link-badge">🔗</span>
+                </div>
+                <div class="honor-content">
+                    <span class="year">2023</span>
+                    <h3>Fall Stars Top 40 Nationally</h3>
+                    <p>Recognized among the top 40 players in the nation for the Class of 2026, awarded for outstanding
+                        performance and sportsmanship.</p>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+        </div>
 
+        <div class="honor-card">
+            <a href="https://vballrecruiter.com" target="_blank">
+                <div class="honor-thumbnail">
+                    <img src="img/vb_recruiter.png"
+                         alt="VballRecruiter Club All-American">
+                    <span class="external-link-badge">🔗</span>
+                </div>
+                <div class="honor-content">
+                    <span class="year">2022</span>
+                    <h3>VballRecruiter.com Club All-American</h3>
+                    <p>Named to the 2022 Club All-Americans for 14s age group, recognizing elite club volleyball
+                        performance.</p>
+                    <span class="read-more">Learn More →</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="honor-card">
+            <a href="https://vballrecruiter.com/aau-14-open-all-tournament-team/" target="_blank">
+                <div class="honor-thumbnail">
+                    <img src="https://raynachristianson.com/img/aau_all_tournament.jpg" alt="AAU All-Tournament Team">
+                    <span class="external-link-badge">🔗</span>
+                </div>
+                <div class="honor-content">
+                    <span class="year">2022</span>
+                    <h3>AAU 14 Open All-Tournament Team</h3>
+                    <p>Selected to the All-Tournament Team at AAU Nationals in Orlando, FL, helping team to 3rd place
+                        finish in Open division.</p>
+                    <span class="read-more">View Team →</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="honor-card">
+            <a href="#" onclick="event.preventDefault(); alert('2021 AAU All-American All Star Team');">
+                <div class="honor-thumbnail">
+                    <img src="https://raynachristianson.com/img/all_american_2021.jpg" alt="All-American All Star Team">
+                </div>
+                <div class="honor-content">
+                    <span class="year">2021</span>
+                    <h3>All-American All Star Team</h3>
+                    <p>Named to the All-American All Star Team at the 2021 AAU Volleyball National Championships in
+                        Orlando, FL.</p>
+                    <span class="read-more">Learn More →</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Videos -->
+<section id="videos" class="container">
+    <h2 class="section-title">Highlight Videos</h2>
+    <div class="video-grid">
+        <!-- Video 1 - YouTube -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe
+                        src="https://www.youtube.com/embed/FtViSVnXTH8"
+                        title="2024 First 11 Games - Club Season"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-platform youtube">YouTube</span>
+                <h3>2024 First 11 Games - Club Season</h3>
+                <p>Highlights from the opening games of the 2024 club season with Mizuno Northern Lights 17-1.
+                    Showcasing setting, hitting, and defensive skills.</p>
+            </div>
+        </div>
+
+        <!-- Video 2 - Hudl Profile Link -->
+        <div class="video-card">
+            <a href="https://www.hudl.com/profile/16554610/Rayna-Christianson/highlights" target="_blank"
+               style="text-decoration: none; color: inherit;">
+                <div class="video-placeholder">
+                    <img src="img/hudl_preview.png" alt="Hudl Highlights"
+                         style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="video-info">
+                    <span class="video-platform hudl">Hudl</span>
+                    <h3>2022-2023 Season Highlights</h3>
+                    <p>Combined highlights from club and high school seasons showcasing versatility and athletic
+                        ability. Click to view on Hudl.</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Video 3 - Additional YouTube slot (placeholder for future videos) -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe
+                        src="https://www.youtube.com/embed/FPD0LoyF3Po"
+                        title="Setting & Attacking Highlights"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-platform youtube">YouTube</span>
+                <h3>Full Highlight Reel</h3>
+                <p>Complete compilation of setting, attacking, and defensive highlights from the 2024 season.</p>
+            </div>
+        </div>
+
+        <!-- Video 4 - Hudl Profile Card -->
+        <div class="video-card">
+            <a href="https://www.hudl.com/profile/16554610/Rayna-Christianson" target="_blank"
+               style="text-decoration: none; color: inherit;">
+                <div class="video-placeholder"
+                     style="background: linear-gradient(135deg, #FF6600 0%, #cc5200 100%); color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;">
+                    <div style="font-size: 4rem; font-weight: bold;">HUDL</div>
+                    <div style="font-size: 1.5rem;">View Full Profile</div>
+                </div>
+                <div class="video-info">
+                    <span class="video-platform hudl">Hudl</span>
+                    <h3>Complete Hudl Profile</h3>
+                    <p>Access full game film, statistics, and comprehensive highlight reels. Click to view complete
+                        profile on Hudl.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="bio-content mt-2" style="text-align: center;">
+        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Full Game Film Available</h3>
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+            Complete game footage and additional highlight reels available upon request for college coaches and
+            recruiters.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="mailto:raynachristianson@icloud.com?subject=Game%20Film%20Request" class="btn btn-primary">Request
+                Full Film</a>
+            <a href="https://www.hudl.com/profile/16554610/Rayna-Christianson/highlights" target="_blank"
+               class="btn btn-secondary">View More on Hudl</a>
+        </div>
+    </div>
+</section>
+
+<!-- Academics -->
+<section id="academics" class="container">
+    <h2 class="section-title">Academics</h2>
+    <div class="bio-content">
+        <p style="font-size: 1.2rem; text-align: center; margin-bottom: 2rem;">
+            <strong>Lakeville North High School</strong> - Honors Track<br>
+            Lakeville North High School maintains a high academic standard, and I am committed to excellence both on the
+            court and in the classroom.
+        </p>
+
+        <div class="academics-grid">
+            <div class="course-category">
+                <h3>AP Classes</h3>
+                <ul>
+                    <li>American Literature</li>
+                    <li>US History</li>
+                    <li>Advanced Algebra 2</li>
+                    <li>Pre-Calculus</li>
+                    <li>Chemistry</li>
+                    <li>Physics 1</li>
+                </ul>
+            </div>
+
+            <div class="course-category">
+                <h3>Core Subjects</h3>
+                <ul>
+                    <li>Health</li>
+                    <li>Biology</li>
+                    <li>Sports Science</li>
+                </ul>
+            </div>
+
+            <div class="course-category">
+                <h3>Other Sports</h3>
+                <ul>
+                    <li>Basketball - AAU North Tartan (2020-2021)</li>
+                    <li>Basketball - MN Crossfire (2022)</li>
+                    <li>Basketball - Lakeville North HS 10A (7th Grade)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container">
+    <div class="contact-section">
+        <h2>Let's Connect!</h2>
+        <p>I'd love to hear from college coaches and scouts. Feel free to reach out to discuss my potential fit for your
+            program or to schedule a time to watch me play.</p>
+        <div class="contact-buttons">
+            <a href="mailto:raynachristianson@icloud.com" class="btn btn-primary">Send Email</a>
+            <a href="tel:+16127083858" class="btn btn-secondary">Call Me</a>
+            <a href="https://northernlightsjuniors.org/2024/schedule.php?year=2024&team=16-1" class="btn btn-secondary"
+               target="_blank">View Tournament Schedule</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Rayna Christianson. All rights reserved.</p>
+    <p style="margin-top: 0.5rem;">Verbally committed to Creighton University - Division I Volleyball</p>
+</footer>
+
+<script>
+    // Mobile menu toggle
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+
+    function closeMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.remove('active');
+    }
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Fade in animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.honor-card, .stat-card, .video-card, .timeline-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+
+    // Header shadow on scroll
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+            header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+        } else {
+            header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        }
+    });
+</script>
 </body>
 </html>
